@@ -15,6 +15,8 @@
 		C93380B21D0BFCFA00DDF957 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93380B01D0BFCFA00DDF957 /* LaunchScreen.storyboard */; };
 		C93380BD1D0BFCFA00DDF957 /* mlo_weather_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93380BC1D0BFCFA00DDF957 /* mlo_weather_appTests.swift */; };
 		C93380C81D0BFCFA00DDF957 /* mlo_weather_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93380C71D0BFCFA00DDF957 /* mlo_weather_appUITests.swift */; };
+		C93380D61D0C11B500DDF957 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93380D51D0C11B500DDF957 /* WeatherService.swift */; };
+		C93380D81D0C17E800DDF957 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93380D71D0C17E800DDF957 /* WeatherData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		C93380C31D0BFCFA00DDF957 /* mlo.weather.appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mlo.weather.appUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93380C71D0BFCFA00DDF957 /* mlo_weather_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mlo_weather_appUITests.swift; sourceTree = "<group>"; };
 		C93380C91D0BFCFA00DDF957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C93380D51D0C11B500DDF957 /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		C93380D71D0C17E800DDF957 /* WeatherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +105,13 @@
 			children = (
 				C93380A41D0BFCFA00DDF957 /* AppDelegate.swift */,
 				C93380A61D0BFCFA00DDF957 /* ViewController.swift */,
+				C93380D71D0C17E800DDF957 /* WeatherData.swift */,
 				C93380A81D0BFCFA00DDF957 /* Main.storyboard */,
 				C93380AE1D0BFCFA00DDF957 /* Assets.xcassets */,
 				C93380B01D0BFCFA00DDF957 /* LaunchScreen.storyboard */,
 				C93380B31D0BFCFA00DDF957 /* Info.plist */,
 				C93380AB1D0BFCFA00DDF957 /* mlo_weather_app.xcdatamodeld */,
+				C93380D51D0C11B500DDF957 /* WeatherService.swift */,
 			);
 			path = mlo.weather.app;
 			sourceTree = "<group>";
@@ -259,6 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C93380D61D0C11B500DDF957 /* WeatherService.swift in Sources */,
+				C93380D81D0C17E800DDF957 /* WeatherData.swift in Sources */,
 				C93380A71D0BFCFA00DDF957 /* ViewController.swift in Sources */,
 				C93380AD1D0BFCFA00DDF957 /* mlo_weather_app.xcdatamodeld in Sources */,
 				C93380A51D0BFCFA00DDF957 /* AppDelegate.swift in Sources */,

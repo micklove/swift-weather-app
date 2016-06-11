@@ -8,20 +8,74 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WeatherServiceDelegate {
 
+    private let weatherService = WeatherService()
+    
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     
     @IBAction
     func setCityTapped(sender: UIButton) {
-        
+        print("Set City Button Tapped");
+        self.openCityAlert();
     }
+    
+    func setWeather(weather: WeatherData) {
+        print("Set Weather invoked: city[\(cityLabel!.text!)]")
+        print("City: \(weather.city) temp: \(weather.temp) description: \(weather.description)");
+        self.cityLabel.text = weather.city;
+        self.descriptionLabel?.text = weather.description
+        self.tempLabel?.text = String(weather.temp)
+
+    }
+    
+    
+    //option click to view details of variables
+    
+    func openCityAlert() {
+        
+        //Create Alert Controller
+        //.Alert allows you to add a text input field (ActionSheet doesn't)
+        let cityAlert = UIAlertController(title: "City", message: "Enter City Name", preferredStyle: .Alert)
+        
+        //Create Cancel action
+        let cancel = UIAlertAction(title: "Cancel",
+            style: .Cancel,
+            handler: nil)
+        cityAlert.addAction(cancel);
+        
+        //Create OK Action
+        let ok = UIAlertAction(title: "OK", style: .Default) { (action: UIAlertAction) -> Void in
+            let textField = cityAlert.textFields?[0]
+            if(nil != textField) {
+                let txt = textField!.text!
+                if(!txt.isEmpty) {
+                    print(textField!.text);
+                    self.weatherService.getWeather(txt)
+                } else {
+                    print("ERROR: No city provided");
+                }
+            }
+        }
+        cityAlert.addAction(ok);
+        
+        cityAlert.addTextFieldWithConfigurationHandler { (textField: UITextField) -> Void in
+            textField.placeholder = "City Name"
+        }
+        
+        self.presentViewController(cityAlert, animated: false, completion: nil)
+    }
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Hello World");
+        print("ViewController did load")
+        self.weatherService.setDelegate(self)
         
         // Do any additional setup after loading the view, typically from a nib.
     }
