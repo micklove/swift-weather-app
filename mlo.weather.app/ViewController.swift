@@ -10,8 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    
+    @IBAction
+    func setCityTapped(sender: UIButton) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Hello World");
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
