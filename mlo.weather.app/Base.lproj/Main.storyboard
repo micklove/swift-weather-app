@@ -86,8 +86,8 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="cityButton" destination="oms-3b-qAT" id="trr-qc-NZq"/>
                         <outlet property="descriptionLabel" destination="6Zx-CN-NnQ" id="IvL-JZ-3Uy"/>
-                        <outlet property="setCityButton" destination="oms-3b-qAT" id="trr-qc-NZq"/>
                         <outlet property="summaryLabel" destination="UvZ-j2-Cef" id="QKE-Dt-HKc"/>
                         <outlet property="tempLabel" destination="XLb-7J-Ifg" id="Wdk-kP-5pf"/>
                     </connections>
