@@ -12,9 +12,11 @@ class ViewController: UIViewController, WeatherServiceDelegate {
 
     private let weatherService = WeatherService()
     
+    @IBOutlet weak var setCityButton: UIButton!
     @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var cityLabel: UILabel!
+//    @IBOutlet weak var cityLabel: UILabel!
     
     @IBAction
     func setCityTapped(sender: UIButton) {
@@ -22,13 +24,22 @@ class ViewController: UIViewController, WeatherServiceDelegate {
         self.openCityAlert();
     }
     
+    func initLabels() {
+//        self.cityLabel.text = ""
+        self.descriptionLabel?.text = ""
+        self.tempLabel?.text = ""
+        self.summaryLabel?.text = ""
+    }
+    
     func setWeather(weather: WeatherData) {
-        print("Set Weather invoked: city[\(cityLabel!.text!)]")
+        let city = weather.city
+        print("Set Weather invoked: city[\(city)]")
         print("City: \(weather.city) temp: \(weather.temp) description: \(weather.description)");
-        self.cityLabel.text = weather.city;
+//        self.cityLabel.text = weather.city;
         self.descriptionLabel?.text = weather.description
+        self.summaryLabel?.text = weather.summary
         self.tempLabel?.text = String(weather.temp)
-
+        self.setCityButton?.setTitle(weather.city, forState: .Normal)
     }
     
     
@@ -76,6 +87,10 @@ class ViewController: UIViewController, WeatherServiceDelegate {
         super.viewDidLoad()
         print("ViewController did load")
         self.weatherService.setDelegate(self)
+        
+        if(self.setCityButton.currentTitle!.lowercaseString == "set city") {
+            self.initLabels()
+        }
         
         // Do any additional setup after loading the view, typically from a nib.
     }
