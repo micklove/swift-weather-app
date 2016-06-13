@@ -18,6 +18,7 @@
 		C93380D61D0C11B500DDF957 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93380D51D0C11B500DDF957 /* WeatherService.swift */; };
 		C93380D81D0C17E800DDF957 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93380D71D0C17E800DDF957 /* WeatherData.swift */; };
 		C9CC684C1D0C4FBA00FFB4C9 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CC684B1D0C4FBA00FFB4C9 /* SwiftyJSON.swift */; };
+		C9E246C51D0E8D3F007E638E /* images in Resources */ = {isa = PBXBuildFile; fileRef = C9E246C41D0E8D3F007E638E /* images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		C93380D51D0C11B500DDF957 /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		C93380D71D0C17E800DDF957 /* WeatherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		C9CC684B1D0C4FBA00FFB4C9 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		C9CC684D1D0E79DE00FFB4C9 /* mloWeatherPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = mloWeatherPlayground.playground; sourceTree = "<group>"; };
+		C9E246C41D0E8D3F007E638E /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +108,12 @@
 		C93380A31D0BFCFA00DDF957 /* mlo.weather.app */ = {
 			isa = PBXGroup;
 			children = (
+				C9E246C41D0E8D3F007E638E /* images */,
 				C93380A41D0BFCFA00DDF957 /* AppDelegate.swift */,
 				C93380A61D0BFCFA00DDF957 /* ViewController.swift */,
 				C93380D71D0C17E800DDF957 /* WeatherData.swift */,
 				C93380A81D0BFCFA00DDF957 /* Main.storyboard */,
+				C9CC684D1D0E79DE00FFB4C9 /* mloWeatherPlayground.playground */,
 				C93380AE1D0BFCFA00DDF957 /* Assets.xcassets */,
 				C93380B01D0BFCFA00DDF957 /* LaunchScreen.storyboard */,
 				C9CC684B1D0C4FBA00FFB4C9 /* SwiftyJSON.swift */,
@@ -241,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9E246C51D0E8D3F007E638E /* images in Resources */,
 				C93380B21D0BFCFA00DDF957 /* LaunchScreen.storyboard in Resources */,
 				C93380AF1D0BFCFA00DDF957 /* Assets.xcassets in Resources */,
 				C93380AA1D0BFCFA00DDF957 /* Main.storyboard in Resources */,

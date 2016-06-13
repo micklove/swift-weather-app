@@ -14,12 +14,18 @@ struct WeatherData {
     let temp: Double
     let summary: String
     let description: String
+    let icon: String
     
-    init(city: String, temp: Double, summary: String, description: String) {
+    init(city: String,
+         temp: Double,
+         summary: String,
+         description: String,
+         icon: String) {
         self.city = city
         self.temp = temp
         self.summary = summary
         self.description = description
+        self.icon = icon
     }
     
 }

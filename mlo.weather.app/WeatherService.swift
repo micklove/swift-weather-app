@@ -63,7 +63,7 @@ class WeatherService {
     }
     
     
-    
+    //See http://api.openweathermap.org/data/2.5/weather?q=mascot&APPID=eaeb448007a512e64e5dc3ccffabb15c
     
     func getWeatherDataFromJson(json: JSON) -> WeatherData {
         print(json);
@@ -74,12 +74,14 @@ class WeatherService {
             let summary = json["weather"][0]["main"].string
             let description = json["weather"][0]["description"].string
             let name = json["name"].string
+            let icon = json["weather"][0]["icon"].string
+            
             print("Weather Service: lon=\(lon), lat=\(lat), summary=\(summary), desc=\(description), temp=\(temp)");
-            let weather = WeatherData(city: name!, temp: temp!, summary: summary!, description: description!)
+            let weather = WeatherData(city: name!, temp: temp!, summary: summary!, description: description!, icon: icon!)
             return weather
         } else {
             //couldn't extract value, assume an error, return an empty WeatherData
-            return WeatherData(city: "", temp: 0, summary: "", description: "")
+            return WeatherData(city: "", temp: 0, summary: "", description: "", icon: "")
         }
     }
     
