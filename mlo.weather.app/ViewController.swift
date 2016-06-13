@@ -17,6 +17,7 @@ class ViewController: UIViewController, WeatherServiceDelegate {
     @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var clouds: UILabel!
+    @IBOutlet weak var cloudinessLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
     
     @IBAction
@@ -29,12 +30,15 @@ class ViewController: UIViewController, WeatherServiceDelegate {
         self.descriptionLabel?.text = ""
         self.tempLabel?.text = ""
         self.summaryLabel?.text = ""
+        self.cloudinessLabel?.text = ""
+        self.clouds?.text = ""
     }
     
     func setWeather(weather: WeatherData) {
         let city = weather.city
         print("Set Weather invoked: city[\(city)]")
         print("City: \(weather.city) temp: \(weather.temp) description: \(weather.description)");
+        self.cloudinessLabel?.text="Cloudiness:"
         self.descriptionLabel?.text = weather.description
         self.summaryLabel?.text = weather.summary
         self.tempLabel?.text = "\(String(weather.temp))°C"

@@ -105,6 +105,7 @@
                     </view>
                     <connections>
                         <outlet property="cityButton" destination="oms-3b-qAT" id="trr-qc-NZq"/>
+                        <outlet property="cloudinessLabel" destination="e9r-i4-gI4" id="IaK-Vz-rpz"/>
                         <outlet property="clouds" destination="zfT-zU-CP4" id="JQx-yV-npC"/>
                         <outlet property="descriptionLabel" destination="6Zx-CN-NnQ" id="IvL-JZ-3Uy"/>
                         <outlet property="iconImageView" destination="B9i-Pb-pHM" id="LAT-fV-HSB"/>
