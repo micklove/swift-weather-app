@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 protocol WeatherServiceDelegate {
     func setWeather(weather: WeatherData)
 }
@@ -78,11 +79,11 @@ class WeatherService {
             let clouds = json["clouds"]["all"].double
             
             print("Weather Service: lon=\(lon), lat=\(lat), summary=\(summary), desc=\(description), temp=\(temp)");
-            let weather = WeatherData(city: name!, temp: temp!, summary: summary!, description: description!, icon: icon!, clouds: clouds!)
+            let weather = WeatherData(city: name!, temp: temp!, summary: summary!, description: description!, icon: icon!, clouds: clouds!, lat: lat!, lon: lon)
             return weather
         } else {
             //couldn't extract value, assume an error, return an empty WeatherData
-            return WeatherData(city: "", temp: 0, summary: "", description: "", icon: "", clouds: 0)
+            return WeatherData(city: "", temp: 0, summary: "", description: "", icon: "", clouds: 0, lat: 0, lon: 0)
         }
     }
     

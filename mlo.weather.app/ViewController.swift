@@ -12,6 +12,7 @@ class ViewController: UIViewController, WeatherServiceDelegate {
 
     private let weatherService = WeatherService()
     
+    @IBOutlet weak var mapSegueButton: UIButton!
     @IBOutlet weak var cityButton: UIButton!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var summaryLabel: UILabel!
@@ -19,11 +20,19 @@ class ViewController: UIViewController, WeatherServiceDelegate {
     @IBOutlet weak var clouds: UILabel!
     @IBOutlet weak var cloudinessLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
+    var weatherData: WeatherData!
+    var mapViewSegueId = "mapViewSegue"
     
     @IBAction
     func setCityTapped(sender: UIButton) {
         print("Set City Button Tapped");
         self.openCityAlert();
+    }
+    
+    @IBAction
+    func mapSegueButtonTapped(sender: UIButton) {
+        print("mapSegueButtonTapped");
+        performSegueWithIdentifier(mapViewSegueId, sender: nil)
     }
     
     func initLabels() {
@@ -35,13 +44,23 @@ class ViewController: UIViewController, WeatherServiceDelegate {
     }
     
     func setWeather(weather: WeatherData) {
+        
+        weatherData = weather
+        
         let city = weather.city
         print("Set Weather invoked: city[\(city)]")
         print("City: \(weather.city) temp: \(weather.temp) description: \(weather.description)");
         self.cloudinessLabel?.text="Cloudiness:"
         self.descriptionLabel?.text = weather.description
         self.summaryLabel?.text = weather.summary
-        self.tempLabel?.text = "\(String(weather.temp))°C"
+        
+        //let formatter = NSNumberFormatter()
+        //let temp = formatter.stringFromNumber(
+        let temp = String(format: "%.1F", weather.temp);
+        
+        //let temp = String(weather.temp)
+        
+        self.tempLabel?.text = "\(temp)°C"
         self.clouds?.text = "\(String(weather.clouds))%"
         self.cityButton?.setTitle(weather.city, forState: .Normal)
         
@@ -85,8 +104,19 @@ class ViewController: UIViewController, WeatherServiceDelegate {
         self.presentViewController(cityAlert, animated: false, completion: nil)
     }
     
+//    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+//        if segue.identifier == "push" {
+//            
+//    }
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        print("prepare for segue [\(mapViewSegueId)]")
+        if segue.identifier == mapViewSegueId && nil != self.weatherData {
+            let vc = segue.destinationViewController as! MapViewController
+            vc.setWeather(weatherData);
+        }
+    }
+
     
     
     override func viewDidLoad() {

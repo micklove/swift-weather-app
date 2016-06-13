@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C918A1751D0EE7FF00ABFFA4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918A1741D0EE7FF00ABFFA4 /* MapViewController.swift */; };
 		C93380A51D0BFCFA00DDF957 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93380A41D0BFCFA00DDF957 /* AppDelegate.swift */; };
 		C93380A71D0BFCFA00DDF957 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93380A61D0BFCFA00DDF957 /* ViewController.swift */; };
 		C93380AA1D0BFCFA00DDF957 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93380A81D0BFCFA00DDF957 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C918A1741D0EE7FF00ABFFA4 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C93380A11D0BFCFA00DDF957 /* mlo.weather.app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mlo.weather.app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93380A41D0BFCFA00DDF957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C93380A61D0BFCFA00DDF957 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				C93380B31D0BFCFA00DDF957 /* Info.plist */,
 				C93380AB1D0BFCFA00DDF957 /* mlo_weather_app.xcdatamodeld */,
 				C93380D51D0C11B500DDF957 /* WeatherService.swift */,
+				C918A1741D0EE7FF00ABFFA4 /* MapViewController.swift */,
 			);
 			path = mlo.weather.app;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				C9CC684C1D0C4FBA00FFB4C9 /* SwiftyJSON.swift in Sources */,
 				C93380AD1D0BFCFA00DDF957 /* mlo_weather_app.xcdatamodeld in Sources */,
 				C93380A51D0BFCFA00DDF957 /* AppDelegate.swift in Sources */,
+				C918A1751D0EE7FF00ABFFA4 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
