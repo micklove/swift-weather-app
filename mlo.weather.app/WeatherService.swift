@@ -75,13 +75,14 @@ class WeatherService {
             let description = json["weather"][0]["description"].string
             let name = json["name"].string
             let icon = json["weather"][0]["icon"].string
+            let clouds = json["clouds"]["all"].double
             
             print("Weather Service: lon=\(lon), lat=\(lat), summary=\(summary), desc=\(description), temp=\(temp)");
-            let weather = WeatherData(city: name!, temp: temp!, summary: summary!, description: description!, icon: icon!)
+            let weather = WeatherData(city: name!, temp: temp!, summary: summary!, description: description!, icon: icon!, clouds: clouds!)
             return weather
         } else {
             //couldn't extract value, assume an error, return an empty WeatherData
-            return WeatherData(city: "", temp: 0, summary: "", description: "", icon: "")
+            return WeatherData(city: "", temp: 0, summary: "", description: "", icon: "", clouds: 0)
         }
     }
     

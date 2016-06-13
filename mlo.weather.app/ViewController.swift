@@ -16,6 +16,7 @@ class ViewController: UIViewController, WeatherServiceDelegate {
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var clouds: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
     
     @IBAction
@@ -37,6 +38,7 @@ class ViewController: UIViewController, WeatherServiceDelegate {
         self.descriptionLabel?.text = weather.description
         self.summaryLabel?.text = weather.summary
         self.tempLabel?.text = "\(String(weather.temp))°C"
+        self.clouds?.text = "\(String(weather.clouds))%"
         self.cityButton?.setTitle(weather.city, forState: .Normal)
         
         iconImageView.image = UIImage(named: "images/" + weather.icon);
