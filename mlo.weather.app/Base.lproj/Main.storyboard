@@ -70,18 +70,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Fr-os-YCH">
-                                <rect key="frame" x="16" y="415" width="288" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ca-aR-5sT">
+                                <rect key="frame" x="12" y="405" width="296" height="30"/>
                                 <state key="normal" title="Map View"/>
                                 <connections>
-                                    <segue destination="auu-ef-fvd" kind="show" identifier="mapViewSegue" id="20v-xR-Uv4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ca-aR-5sT">
-                                <rect key="frame" x="16" y="462" width="288" height="30"/>
-                                <state key="normal" title="Segue"/>
-                                <connections>
                                     <action selector="mapSegueButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bOG-Vh-UKR"/>
+                                    <segue destination="auu-ef-fvd" kind="presentation" identifier="mapViewSegue" id="t1c-Gt-C78"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -89,34 +83,31 @@
                         <constraints>
                             <constraint firstItem="UvZ-j2-Cef" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="010-4H-f5g"/>
                             <constraint firstItem="6Zx-CN-NnQ" firstAttribute="top" secondItem="UvZ-j2-Cef" secondAttribute="bottom" constant="8" id="3eB-Ik-zYT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Ca-aR-5sT" secondAttribute="trailing" constant="-4" id="3fx-qq-eg4"/>
                             <constraint firstItem="oms-3b-qAT" firstAttribute="top" secondItem="zfT-zU-CP4" secondAttribute="bottom" constant="21" id="4aP-1G-VXS"/>
                             <constraint firstItem="6Zx-CN-NnQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6PB-Rb-44w"/>
-                            <constraint firstItem="0Fr-os-YCH" firstAttribute="top" secondItem="B9i-Pb-pHM" secondAttribute="bottom" constant="36" id="7r4-cp-yUd"/>
-                            <constraint firstItem="3Ca-aR-5sT" firstAttribute="top" secondItem="0Fr-os-YCH" secondAttribute="bottom" constant="17" id="98J-LY-i94"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oms-3b-qAT" secondAttribute="trailing" constant="-20" id="9y8-0t-pjd"/>
                             <constraint firstItem="B9i-Pb-pHM" firstAttribute="top" secondItem="oms-3b-qAT" secondAttribute="bottom" constant="37" id="B12-gn-oqt"/>
                             <constraint firstItem="UvZ-j2-Cef" firstAttribute="top" secondItem="XLb-7J-Ifg" secondAttribute="bottom" constant="30" id="DF3-5P-oaO"/>
                             <constraint firstItem="e9r-i4-gI4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FXp-tn-4xI"/>
                             <constraint firstItem="e9r-i4-gI4" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="GNS-hJ-z2g"/>
+                            <constraint firstItem="3Ca-aR-5sT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="Ldq-yJ-RPd"/>
                             <constraint firstItem="UvZ-j2-Cef" firstAttribute="top" secondItem="XLb-7J-Ifg" secondAttribute="bottom" constant="30" id="NMw-wj-yUy"/>
-                            <constraint firstItem="3Ca-aR-5sT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Pja-BU-O1v"/>
                             <constraint firstItem="oms-3b-qAT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="RPV-ho-T06"/>
                             <constraint firstItem="zfT-zU-CP4" firstAttribute="top" secondItem="e9r-i4-gI4" secondAttribute="bottom" constant="7.5" id="RRt-bX-yKM"/>
-                            <constraint firstItem="0Fr-os-YCH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Sgi-Z1-l4p"/>
+                            <constraint firstItem="3Ca-aR-5sT" firstAttribute="top" secondItem="B9i-Pb-pHM" secondAttribute="bottom" constant="26" id="Xhy-tQ-VWL"/>
                             <constraint firstItem="XLb-7J-Ifg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="aNw-9r-ZU7"/>
                             <constraint firstItem="e9r-i4-gI4" firstAttribute="top" secondItem="6Zx-CN-NnQ" secondAttribute="bottom" constant="16.5" id="dVB-wU-hhi"/>
                             <constraint firstItem="UvZ-j2-Cef" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dhY-IL-6j5"/>
                             <constraint firstItem="B9i-Pb-pHM" firstAttribute="top" secondItem="oms-3b-qAT" secondAttribute="bottom" constant="37" id="em1-3i-izJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0Fr-os-YCH" secondAttribute="trailing" id="gSO-e1-1Dm"/>
                             <constraint firstItem="6Zx-CN-NnQ" firstAttribute="top" secondItem="UvZ-j2-Cef" secondAttribute="bottom" constant="8" id="gdV-8P-3Nn"/>
                             <constraint firstItem="6Zx-CN-NnQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gkS-Bz-anw"/>
+                            <constraint firstItem="3Ca-aR-5sT" firstAttribute="top" secondItem="B9i-Pb-pHM" secondAttribute="bottom" constant="26" id="jX3-E5-uzT"/>
                             <constraint firstItem="zfT-zU-CP4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kwh-j2-fEV"/>
                             <constraint firstItem="XLb-7J-Ifg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="mnd-E6-kj0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3Ca-aR-5sT" secondAttribute="trailing" id="nnF-e2-sVf"/>
                             <constraint firstItem="B9i-Pb-pHM" firstAttribute="centerX" secondItem="zfT-zU-CP4" secondAttribute="centerX" id="oDN-1h-p3j"/>
                             <constraint firstItem="XLb-7J-Ifg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tJy-z9-Y9s"/>
                             <constraint firstItem="zfT-zU-CP4" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="tsB-k2-v0f"/>
-                            <constraint firstItem="0Fr-os-YCH" firstAttribute="top" secondItem="B9i-Pb-pHM" secondAttribute="bottom" constant="36" id="y8O-1E-xuv"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">

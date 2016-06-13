@@ -36,6 +36,7 @@ class ViewController: UIViewController, WeatherServiceDelegate {
     }
     
     func initLabels() {
+        hideLabels(true)
         self.descriptionLabel?.text = ""
         self.tempLabel?.text = ""
         self.summaryLabel?.text = ""
@@ -43,14 +44,30 @@ class ViewController: UIViewController, WeatherServiceDelegate {
         self.clouds?.text = ""
     }
     
+    func initControls() {
+        self.hideLabels(true);
+    }
+    
+    func hideLabels(display: Bool) {
+        self.descriptionLabel?.hidden = display;
+        self.tempLabel?.hidden = display;
+        self.summaryLabel?.hidden = display;
+        self.clouds?.hidden = display;
+        self.cloudinessLabel?.hidden = display;
+        
+        self.mapSegueButton?.hidden = display
+    }
+    
     func setWeather(weather: WeatherData) {
+        
+        self.hideLabels(false);
         
         weatherData = weather
         
         let city = weather.city
         print("Set Weather invoked: city[\(city)]")
         print("City: \(weather.city) temp: \(weather.temp) description: \(weather.description)");
-        self.cloudinessLabel?.text="Cloudiness:"
+//        self.cloudinessLabel?.text="Cloudiness:"
         self.descriptionLabel?.text = weather.description
         self.summaryLabel?.text = weather.summary
         
@@ -117,6 +134,9 @@ class ViewController: UIViewController, WeatherServiceDelegate {
         }
     }
 
+    @IBAction func unwindToRed(segue: UIStoryboardSegue) {
+        
+    }
     
     
     override func viewDidLoad() {
@@ -125,7 +145,8 @@ class ViewController: UIViewController, WeatherServiceDelegate {
         self.weatherService.setDelegate(self)
         
         if(self.cityButton.currentTitle!.lowercaseString == "set city") {
-            self.initLabels()
+            //self.initLabels()
+            self.initControls()
         }
         
         // Do any additional setup after loading the view, typically from a nib.
