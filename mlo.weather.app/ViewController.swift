@@ -134,8 +134,10 @@ class ViewController: UIViewController, WeatherServiceDelegate {
         }
     }
 
-    @IBAction func unwindToRed(segue: UIStoryboardSegue) {
-        
+    
+    //http://stackoverflow.com/a/15839298/178808
+    @IBAction func unwindToMyViewController(segue: UIStoryboardSegue) {
+        print("unwind done...")
     }
     
     

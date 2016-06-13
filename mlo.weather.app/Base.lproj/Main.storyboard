@@ -150,7 +150,7 @@
                                 <rect key="frame" x="16" y="521" width="292" height="30"/>
                                 <state key="normal" title="back"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="M8r-0x-Hjx"/>
+                                    <segue destination="Lh8-Tn-IEC" kind="unwind" unwindAction="unwindToMyViewController:" id="IdQ-kj-Ruv"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaL-xT-DTU">
@@ -194,6 +194,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1dD-BK-Dar" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Lh8-Tn-IEC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="723" y="375"/>
         </scene>
